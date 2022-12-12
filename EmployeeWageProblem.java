@@ -10,6 +10,9 @@ public class EmployeeWageProblem {
         int wagePH = 20;
         int fullDayH = 8;
         int partTimeDayH = 4;
+        int days = 0;
+        int salary = 0;
+        int monthly_salary = 0;
 //        if (a == 1) {
 //            System.out.println("Employee is Present\nPer Day Wage is :" + " " + (wagePH * fullDayH));
 //        } else if (a == 2) {
@@ -18,16 +21,23 @@ public class EmployeeWageProblem {
 //            System.out.println("Employee is Absent\nPer Day Wage is :" + " " + (0));
 //        }
 
-        switch (a) {
-            case 1 :
-                System.out.println("Employee is Present\nPer Day Wage is :" + " " + (wagePH * fullDayH));
-                break;
-            case 2 :
-                System.out.println("Employee is Present Halfday\nPer Day Wage is :" + " " + (wagePH * partTimeDayH));
-                break;
-            default:
-                System.out.println("Employee is Absent\nPer Day Wage is :" + " " + (0));
-                break;
+        while (days != 20) {
+            days++;
+
+            switch (a) {
+                case 1: salary = (wagePH * fullDayH);
+                    System.out.println("Employee is Present\nPer Day Wage is :" + " " + salary );
+                    break;
+                case 2: salary = (wagePH * partTimeDayH);
+                    System.out.println("Employee is Present Halfday\nPer Day Wage is :" + " " + salary );
+                    break;
+                default:
+                    System.out.println("Employee is Absent\nPer Day Wage is :" + " " + (0));
+                    break;
+            }
+            monthly_salary += salary;
+            System.out.println("Employee's Monthly Salary is: " + monthly_salary);
+            System.out.println();
         }
     }
 }
